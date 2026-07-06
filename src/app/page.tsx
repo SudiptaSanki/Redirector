@@ -1,6 +1,7 @@
 'use client';
 import redirects from '../../redirects.json';
 import Link from 'next/link';
+import Lightfall from '@/components/Lightfall';
 
 export default function Home() {
   const redirectKeys = Object.keys(redirects);
@@ -8,8 +9,25 @@ export default function Home() {
   return (
     <main className="flex-1 w-full max-w-5xl mx-auto p-6 flex flex-col pt-12 md:pt-24 relative">
       {/* Background decoration */}
-      <div className="absolute top-[-10%] left-[-10%] w-[40%] h-[40%] bg-blue-600/20 blur-[120px] rounded-full pointer-events-none" />
-      <div className="absolute bottom-[-10%] right-[-10%] w-[40%] h-[40%] bg-purple-600/20 blur-[120px] rounded-full pointer-events-none" />
+      <div className="fixed inset-0 z-0 pointer-events-auto">
+        <Lightfall
+          colors={['#A6C8FF', '#5227FF', '#FF9FFC']}
+          backgroundColor="#020617" // matching slate-950/gray-950
+          speed={0.5}
+          streakCount={2}
+          streakWidth={1}
+          streakLength={1}
+          glow={1}
+          density={0.6}
+          twinkle={1}
+          zoom={3}
+          backgroundGlow={0.5}
+          opacity={1}
+          mouseInteraction
+          mouseStrength={0.5}
+          mouseRadius={1}
+        />
+      </div>
 
       <header className="mb-12 relative z-10 text-center md:text-left">
         <h1 className="text-4xl md:text-6xl font-bold tracking-tight mb-4 bg-clip-text text-transparent bg-gradient-to-r from-blue-400 to-purple-500">
