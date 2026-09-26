@@ -1,0 +1,25 @@
+# Cloudflare Wrangler Configuration Template
+# Copy this file to wrangler.toml or set via Wrangler CLI
+
+name = "redirector"
+compatibility_date = "2024-09-23"
+pages_build_output_dir = "dist"
+
+# Cloudflare D1 Database Binding
+[[d1_databases]]
+binding = "DB"
+database_name = "redirector-db"
+database_id = "YOUR_D1_DATABASE_ID_HERE"
+
+# Environment Variables (Public)
+[vars]
+APP_URL = "https://your-domain.pages.dev"
+TURNSTILE_SITE_KEY = "1x00000000000000000000AA" # Turnstile Always Passes Test Key
+
+# Secrets to be configured via `wrangler secret put` or `.dev.vars`:
+# - GITHUB_CLIENT_ID
+# - GITHUB_CLIENT_SECRET
+# - GOOGLE_CLIENT_ID
+# - GOOGLE_CLIENT_SECRET
+# - TURNSTILE_SECRET_KEY (Testing key: 1x0000000000000000000000000000000AA)
+# - SESSION_SECRET

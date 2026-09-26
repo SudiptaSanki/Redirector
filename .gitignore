@@ -19,6 +19,7 @@
 
 # production
 /build
+/dist
 
 # misc
 .DS_Store
@@ -39,3 +40,10 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# Cloudflare & secrets
+.dev.vars*
+.wrangler/
+wrangler.toml
+wrangler.toml.local
+Idea.md
