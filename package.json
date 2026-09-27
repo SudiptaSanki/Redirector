@@ -13,11 +13,13 @@
     "d1:init:remote": "wrangler d1 execute redirector-db --remote --file=./schema.sql"
   },
   "dependencies": {
-    "@vercel/analytics": "^2.0.1",
-    "next": "16.2.10",
+    "lucide-react": "^1.48.0",
     "ogl": "^1.0.11",
+    "qrcode.react": "^4.2.0",
     "react": "19.2.4",
-    "react-dom": "19.2.4"
+    "react-dom": "19.2.4",
+    "react-router-dom": "^7.18.4",
+    "vite": "^8.3.1"
   },
   "devDependencies": {
     "@cloudflare/workers-types": "^5.20260926.1",
@@ -27,12 +29,7 @@
     "@types/react-dom": "^19",
     "@vitejs/plugin-react": "^6.1.1",
     "eslint": "^9",
-    "eslint-config-next": "16.2.10",
-    "lucide-react": "^1.48.0",
-    "qrcode.react": "^4.2.0",
-    "react-router-dom": "^7.18.4",
     "tailwindcss": "^4",
-    "typescript": "^5",
-    "vite": "^8.3.1"
+    "typescript": "^5"
   }
 }
